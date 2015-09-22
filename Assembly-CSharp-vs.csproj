@@ -48,6 +48,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Brick.cs" />
      <Compile Include="Assets\Scripts\BrickMover.cs" />
+<<<<<<< HEAD
+=======
+     <Compile Include="Assets\Scripts\Scroller.cs" />
+>>>>>>> bkgnd_dev
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
