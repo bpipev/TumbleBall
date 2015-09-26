@@ -3,6 +3,8 @@ using System.Collections;
 
 public class BrickMover : MonoBehaviour {
     GameObject[] bricks;
+    public float brick_start_position = -6f;
+    public float brick_max_width_scale = 0.5f;
     // Use this for initialization
     void Start () {
         bricks = GameObject.FindGameObjectsWithTag("Brick");
@@ -19,29 +21,30 @@ public class BrickMover : MonoBehaviour {
                 MeshRenderer m = brick.GetComponent<MeshRenderer>();
                 Rigidbody2D rb = brick.GetComponent<Rigidbody2D>();
                 float positive_or_negative = (Random.Range(0, 2) * 2 - 1);
-                Vector3 position = new Vector3(0.5f + Random.Range(1, 6) * positive_or_negative, -6f, 0f);
+                Vector3 position = new Vector3(0.1f + Random.Range(1, 3) * positive_or_negative, brick_start_position, 0f);
                 brick.transform.position = position;
                 Vector3 scaleBy = new Vector3();
                 float width_scale = 0f;
-                if (brick.transform.localScale.x >= 1f)
+                float next_width_scale = brick.transform.localScale.x + width_scale;
+                do
                 {
-                    brick.transform.localScale = new Vector3(0.1f, 1f, 0.05f);
-                    width_scale = 0.1f;
-                    m.material.mainTextureScale = new Vector2(2f, 2f);
-                }
-                else
-                {
-                    positive_or_negative = (Random.Range(0, 2) * 2 - 1);
-                    do
+                    if (next_width_scale >= brick_max_width_scale)
+                    {
+                        brick.transform.localScale = new Vector3(0.1f, 1f, 0.05f);
+                        width_scale = 0.1f;
+                        m.material.mainTextureScale = new Vector2(2f, 2f);
+                    }
+                    else
                     {
                         positive_or_negative = (Random.Range(0, 2) * 2 - 1);
-                        width_scale = 0.1f * Random.Range(0, 10) * positive_or_negative;
-                    } while (width_scale < 0.1f);
-                    scaleBy = new Vector3(width_scale, 0f, 0f);
-                    brick.transform.localScale += scaleBy;
-                    m.material.mainTextureScale += new Vector2(scaleBy.x * 2 * 10, scaleBy.y);
-                }
-                
+                        width_scale = 0.1f * Random.Range(0, (int)(brick_max_width_scale * 10)) * positive_or_negative;
+                    }
+                    next_width_scale = brick.transform.localScale.x + width_scale;
+                } while (width_scale < 0.1f || next_width_scale > brick_max_width_scale);
+                scaleBy = new Vector3(width_scale, 0f, 0f);
+                brick.transform.localScale += scaleBy;
+                m.material.mainTextureScale += new Vector2(scaleBy.x * 2 * 10, scaleBy.y);
+                rb.velocity = new Vector3();
                 b.IsMoving = true;
                 rb.AddForce(new Vector3(0f, 100f, 0f));
                 break;
