@@ -69,10 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BallMover.cs" />
+    <Compile Include="Assets\Scripts\BoundaryScripts\SetLeftBoundary.cs" />
+    <Compile Include="Assets\Scripts\BoundaryScripts\SetRightBoundary.cs" />
+    <Compile Include="Assets\Scripts\BoundaryScripts\SetTopBoundary.cs" />
     <Compile Include="Assets\Scripts\BrickMover.cs" />
+    <Compile Include="Assets\Scripts\GameLogic.cs" />
     <Compile Include="Assets\Scripts\Scroller.cs" />
-    <Compile Include="Assets\Scripts\SetLeftBoundary.cs" />
-    <Compile Include="Assets\Scripts\SetRightBoundary.cs" />
     <Compile Include="Assets\Scripts\Wall.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
