@@ -26,6 +26,9 @@ public class BrickMover : MonoBehaviour {
                 wall.ScaleWall();
                 wall.IsMoving = true;
                 rb.AddForce(new Vector3(0f, 100f, 0f));
+                GameObject instance = Instantiate(Resources.Load("Traps/Prefabs/Spike", typeof(GameObject))) as GameObject;
+                instance.name = "Spike";
+                instance.transform.SetParent(wall_parent.transform, false);
                 break;
             }
         }
@@ -41,6 +44,7 @@ public class BrickMover : MonoBehaviour {
             if (wall.IsMoving && !r.isVisible && wall_parent.transform.position.y > 0f)
             {
                 wall.IsMoving = false;
+                Destroy(wall_parent.transform.Find("Spike").gameObject);
                 rb.velocity = new Vector3();
             }
         }
