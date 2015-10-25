@@ -13,7 +13,7 @@ public class GameLogic : MonoBehaviour {
 	
 	}
 
-    void GameOver()
+    public void GameOver()
     {
         Debug.Log("Game Over");
     }
