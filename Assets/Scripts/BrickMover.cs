@@ -4,9 +4,10 @@ using System.Collections;
 public class BrickMover : MonoBehaviour {
     GameObject[] wall_parents;
     public float brick_start_position;
-    
+    private Object spike;
     // Use this for initialization
     void Start () {
+        spike = Resources.Load("Traps/Prefabs/Spike", typeof(GameObject));
         wall_parents = GameObject.FindGameObjectsWithTag("Parent_brick");
         InvokeRepeating("MoveWall", 0f, 1f);
     }
@@ -23,10 +24,10 @@ public class BrickMover : MonoBehaviour {
                 Vector3 position = new Vector3((float)Random.Range(0, 31)/10f * positive_or_negative, brick_start_position, 0f);
                 wall_parent.transform.position = position;
                 rb.velocity = new Vector3();
-                wall.ScaleWall();
+                wall.ScaleWall(position);
                 wall.IsMoving = true;
                 rb.AddForce(new Vector3(0f, 100f, 0f));
-                GameObject instance = Instantiate(Resources.Load("Traps/Prefabs/Spike", typeof(GameObject))) as GameObject;
+                GameObject instance = Instantiate(spike) as GameObject;
                 instance.name = "Spike";
                 instance.transform.SetParent(wall_parent.transform, false);
                 break;
