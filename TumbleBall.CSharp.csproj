@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\BoundaryScripts\SetTopBoundary.cs" />
     <Compile Include="Assets\Scripts\BrickMover.cs" />
     <Compile Include="Assets\Scripts\GameLogic.cs" />
+    <Compile Include="Assets\Scripts\HittingTraps.cs" />
     <Compile Include="Assets\Scripts\Scroller.cs" />
     <Compile Include="Assets\Scripts\Wall.cs" />
   </ItemGroup>

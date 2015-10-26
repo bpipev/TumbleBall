@@ -7,7 +7,7 @@ public class BrickMover : MonoBehaviour {
     private Object spike;
     // Use this for initialization
     void Start () {
-        spike = Resources.Load("Traps/Prefabs/Spike", typeof(GameObject));
+        spike = Resources.Load("Traps/Prefabs/SpikeBase", typeof(GameObject));
         wall_parents = GameObject.FindGameObjectsWithTag("Parent_brick");
         InvokeRepeating("MoveWall", 0f, 1f);
     }
@@ -28,7 +28,7 @@ public class BrickMover : MonoBehaviour {
                 wall.IsMoving = true;
                 rb.AddForce(new Vector3(0f, 100f, 0f));
                 GameObject instance = Instantiate(spike) as GameObject;
-                instance.name = "Spike";
+                instance.name = "SpikeBase";
                 instance.transform.SetParent(wall_parent.transform, false);
                 break;
             }
@@ -45,7 +45,7 @@ public class BrickMover : MonoBehaviour {
             if (wall.IsMoving && !r.isVisible && wall_parent.transform.position.y > 0f)
             {
                 wall.IsMoving = false;
-                Destroy(wall_parent.transform.Find("Spike").gameObject);
+                Destroy(wall_parent.transform.Find("SpikeBase").gameObject);
                 rb.velocity = new Vector3();
             }
         }
