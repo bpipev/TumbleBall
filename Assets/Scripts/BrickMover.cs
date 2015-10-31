@@ -45,7 +45,10 @@ public class BrickMover : MonoBehaviour {
             if (wall.IsMoving && !r.isVisible && wall_parent.transform.position.y > 0f)
             {
                 wall.IsMoving = false;
-                Destroy(wall_parent.transform.Find("SpikeBase").gameObject);
+                if (wall_parent.transform.Find("SpikeBase") != null)
+                    Destroy(wall_parent.transform.Find("SpikeBase").gameObject);
+                if(wall_parent.transform.Find("Bomb") != null)
+                    Destroy(wall_parent.transform.Find("Bomb").gameObject);
                 rb.velocity = new Vector3();
             }
         }

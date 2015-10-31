@@ -20,6 +20,14 @@ public class HittingTraps : MonoBehaviour {
             GameLogic gl = GameObject.FindGameObjectWithTag("GameLogic").GetComponent<GameLogic>();
             gl.GameOver();
             GetComponentInChildren<ParticleSystem>().Play();
+
+        }
+        if(coll.gameObject.tag == "Bomb")
+        {
+            GameLogic gl = GameObject.FindGameObjectWithTag("GameLogic").GetComponent<GameLogic>();
+            gl.GameOver();
+            GetComponentInChildren<ParticleSystem>().Play();
+            Destroy(coll.gameObject);
         }
 
     }
