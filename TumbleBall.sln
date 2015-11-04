@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumbleBall.CSharp", "TumbleBall.CSharp.csproj", "{8746AC24-192E-307C-14E0-9616C2E326D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumbleBall.CSharp.Editor", "TumbleBall.CSharp.Editor.csproj", "{D71619C7-0B30-8FFA-4C93-66E9841544A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{8746AC24-192E-307C-14E0-9616C2E326D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8746AC24-192E-307C-14E0-9616C2E326D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8746AC24-192E-307C-14E0-9616C2E326D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D71619C7-0B30-8FFA-4C93-66E9841544A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D71619C7-0B30-8FFA-4C93-66E9841544A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D71619C7-0B30-8FFA-4C93-66E9841544A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D71619C7-0B30-8FFA-4C93-66E9841544A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

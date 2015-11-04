@@ -5,16 +5,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8746AC24-192E-307C-14E0-9616C2E326D6}</ProjectGuid>
+    <ProjectGuid>{D71619C7-0B30-8FFA-4C93-66E9841544A3}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>5.2.2f1</UnityVersion>
     <RootNamespace></RootNamespace>
@@ -51,14 +51,59 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\UnityAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WP8.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WP8.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Metro.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Metro.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Tizen.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Tizen.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SamsungTV.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.SamsungTV.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WebGL.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.OSXStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
@@ -66,32 +111,20 @@
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
+    <Reference Include="JMOAssets">
+      <HintPath>Assets\Resources\JMO Assets\Editor\JMOAssets.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Demo\Assets\CFX3_Demo.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Demo\UI\CFX_Demo_GTButton.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Demo\UI\CFX_Demo_GTToggle.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Scripts\CFX_AutodestructWhenNoChildren.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Scripts\CFX_InspectorHelp.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Scripts\CFX_ShurikenThreadFix.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Spawn System\CFX_SpawnSystem.cs" />
-    <Compile Include="Assets\Scripts\BallMover.cs" />
-    <Compile Include="Assets\Scripts\BombGeneration.cs" />
-    <Compile Include="Assets\Scripts\BoundaryScripts\SetBottomBoundary.cs" />
-    <Compile Include="Assets\Scripts\BoundaryScripts\SetLeftBoundary.cs" />
-    <Compile Include="Assets\Scripts\BoundaryScripts\SetRightBoundary.cs" />
-    <Compile Include="Assets\Scripts\BoundaryScripts\SetTopBoundary.cs" />
-    <Compile Include="Assets\Scripts\BrickMover.cs" />
-    <Compile Include="Assets\Scripts\GameLogic.cs" />
-    <Compile Include="Assets\Scripts\HittingTraps.cs" />
-    <Compile Include="Assets\Scripts\Scroller.cs" />
-    <Compile Include="Assets\Scripts\Wall.cs" />
+    <ProjectReference Include="TumbleBall.CSharp.csproj">
+      <Project>{8746AC24-192E-307C-14E0-9616C2E326D6}</Project>
+      <Name>TumbleBall.CSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
+    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Editor\CFX_InspectorHelpEditor.cs" />
+    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Editor\CFX_SpawnSystemEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\JMO Assets\!JMO Assets Readme.txt" />
