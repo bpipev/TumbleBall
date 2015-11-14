@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts;
 
 public class BrickMover : MonoBehaviour {
     GameObject[] wall_parents;
@@ -20,8 +21,8 @@ public class BrickMover : MonoBehaviour {
             if (!wall.IsMoving)
             {
                 Rigidbody2D rb = wall_parent.GetComponent<Rigidbody2D>();
-                float positive_or_negative = (Random.Range(0, 2) * 2 - 1);
-                Vector3 position = new Vector3((float)Random.Range(0, 31)/10f * positive_or_negative, brick_start_position, 0f);
+                PositionHelper ph = new PositionHelper();
+                Vector3 position = ph.GenerateStartingPosition();
                 wall_parent.transform.position = position;
                 rb.velocity = new Vector3();
                 wall.ScaleWall(position);
@@ -47,8 +48,7 @@ public class BrickMover : MonoBehaviour {
                 wall.IsMoving = false;
                 if (wall_parent.transform.Find("SpikeBase") != null)
                     Destroy(wall_parent.transform.Find("SpikeBase").gameObject);
-                if(wall_parent.transform.Find("Bomb") != null)
-                    Destroy(wall_parent.transform.Find("Bomb").gameObject);
+                //Destroy(wall_parent.transform.Find("Bomb").gameObject);
                 rb.velocity = new Vector3();
             }
         }

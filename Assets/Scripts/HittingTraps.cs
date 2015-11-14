@@ -22,7 +22,7 @@ public class HittingTraps : MonoBehaviour {
             GetComponentInChildren<ParticleSystem>().Play();
 
         }
-        if(coll.gameObject.tag == "Bomb")
+        if(coll.gameObject.tag == "HealthDown")
         {
             GameLogic gl = GameObject.FindGameObjectWithTag("GameLogic").GetComponent<GameLogic>();
             gl.GameOver();
