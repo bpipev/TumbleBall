@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HittingTraps : MonoBehaviour {
+public class HittingObjects : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,6 @@ public class HittingTraps : MonoBehaviour {
             GameLogic gl = GameObject.FindGameObjectWithTag("GameLogic").GetComponent<GameLogic>();
             gl.GameOver();
             GetComponentInChildren<ParticleSystem>().Play();
-
         }
         if(coll.gameObject.tag == "HealthDown")
         {
@@ -29,6 +28,12 @@ public class HittingTraps : MonoBehaviour {
             GetComponentInChildren<ParticleSystem>().Play();
             Destroy(coll.gameObject);
         }
-
+        if(coll.gameObject.tag == "ExtraPoints")
+        {
+            GameLogic gl = GameObject.FindGameObjectWithTag("GameLogic").GetComponent<GameLogic>();
+            gl.AddPoints();
+            GetComponentInChildren<EllipsoidParticleEmitter>().Emit();
+            Destroy(coll.gameObject);
+        }
     }
 }

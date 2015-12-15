@@ -17,4 +17,9 @@ public class GameLogic : MonoBehaviour {
     {
         Debug.Log("Game Over");
     }
+
+    public void AddPoints()
+    {
+        Debug.Log("Add Points");
+    }
 }
