@@ -4,10 +4,10 @@ using System.Collections;
 public class Wall : MonoBehaviour {
     public bool IsMoving { get; set; }
     public float brick_max_width_scale;
-    private float ball_width;
+    private float ball_diameter;
     // Use this for initialization
     void Start () {
-        ball_width = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>().size.x;
+        ball_diameter = GameObject.FindGameObjectWithTag("Player").GetComponent<CircleCollider2D>().radius * 2;
     }
 	
 	// Update is called once per frame
@@ -27,10 +27,10 @@ public class Wall : MonoBehaviour {
         
         float width_scale = 0f;
         
-        if (Mathf.Abs(wall_middle.x) > ball_width)
+        if (Mathf.Abs(wall_middle.x) > ball_diameter)
             brick_max_width_scale = 6f;
         else
-            brick_max_width_scale = 6f - ball_width * 2;
+            brick_max_width_scale = 6f - ball_diameter * 2;
 
         brick_max_width_scale *= 10;
         

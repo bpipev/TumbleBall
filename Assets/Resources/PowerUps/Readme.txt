@@ -12,8 +12,14 @@ The paid version has three different color/texture variations for each power up 
 
 
 
+
+
+
+
+
+
 ---------------------------------
---Mobile Power Ups Vol 1 (Full)--
+--Mobile Power Ups Vol 1 (PRO) --
 ---------------------------------
 
 This collection of 3D power-ups includes 20 different power-ups in three different variations.

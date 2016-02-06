@@ -51,11 +51,17 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
@@ -68,19 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Demo\Assets\CFX3_Demo.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Demo\UI\CFX_Demo_GTButton.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Demo\UI\CFX_Demo_GTToggle.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Scripts\CFX_AutodestructWhenNoChildren.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Scripts\CFX_InspectorHelp.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Scripts\CFX_ShurikenThreadFix.cs" />
-    <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Spawn System\CFX_SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\BallMover.cs" />
     <Compile Include="Assets\Scripts\BoundaryScripts\SetBottomBoundary.cs" />
     <Compile Include="Assets\Scripts\BoundaryScripts\SetLeftBoundary.cs" />
@@ -96,12 +90,7 @@
     <Compile Include="Assets\Scripts\Wall.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Resources\JMO Assets\!JMO Assets Readme.txt" />
-    <None Include="Assets\Resources\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
     <None Include="Assets\Resources\JMO Assets\Cartoon FX\CartoonFX3 Readme.txt" />
-    <None Include="Assets\Resources\JMO Assets\Cartoon FX\Shaders\CFX3 Invert.shader" />
-    <None Include="Assets\Resources\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
-    <None Include="Assets\Resources\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
     <None Include="Assets\Resources\PowerUps\Readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
