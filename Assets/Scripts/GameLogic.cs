@@ -1,7 +1,13 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class GameLogic : MonoBehaviour {
+
+    private int score;
+
+    public int Score {
+        get { return score; } 
+        set { score = value; }
+    }
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +26,8 @@ public class GameLogic : MonoBehaviour {
 
     public void AddPoints()
     {
+        Score += 100;
+        GameObject.FindGameObjectWithTag("Score").GetComponent<TextMesh>().text = "Score: " + score;
         Debug.Log("Add Points");
     }
 }
