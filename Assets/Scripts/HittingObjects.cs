@@ -15,20 +15,16 @@ public class HittingObjects : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Spike")
+        if (coll.gameObject.tag == "HealthDown")
         {
             GameLogic gl = GameObject.FindGameObjectWithTag("GameLogic").GetComponent<GameLogic>();
-            gl.GameOver();
-            GetComponentInChildren<ParticleSystem>().Play();
-        }
-        if(coll.gameObject.tag == "HealthDown")
-        {
-            GameLogic gl = GameObject.FindGameObjectWithTag("GameLogic").GetComponent<GameLogic>();
-            gl.GameOver();
+            gl.LosePoints();
+            HealthBarResizer hbr = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarResizer>();
+            hbr.SetSize(gl.Health/100f);
             GetComponentInChildren<ParticleSystem>().Play();
             Destroy(coll.gameObject);
         }
-        if(coll.gameObject.tag == "ExtraPoints")
+        else if(coll.gameObject.tag == "ExtraPoints")
         {
             GameLogic gl = GameObject.FindGameObjectWithTag("GameLogic").GetComponent<GameLogic>();
             gl.AddPoints();

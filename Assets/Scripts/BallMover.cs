@@ -12,7 +12,8 @@ public class BallMover : MonoBehaviour {
 		GetComponent<Rigidbody2D>().AddForce (new Vector2(direction,0));
 		
 		foreach (Touch touch in Input.touches) {
-			GetComponent<Rigidbody2D>().AddForce (new Vector2(0,jumpHeight));
+            if (touch.phase == TouchPhase.Began)
+                GetComponent<Rigidbody2D>().AddForce (new Vector2(0,jumpHeight));
 		}
 		
 		

@@ -19,8 +19,8 @@ public class SetTopBoundary : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player")
         {
-            GameObject gl = GameObject.FindGameObjectWithTag("GameLogic");
-            gl.SendMessage("GameOver");
+            GameLogic gl = GameObject.FindGameObjectWithTag("GameLogic").GetComponent<GameLogic>();
+            gl.GameOver();
         }
 
     }
